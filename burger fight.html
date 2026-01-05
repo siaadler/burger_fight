@@ -1,0 +1,55 @@
+<html>
+  <head>
+    <style>
+     body {background-color:rgb(204, 148, 18);}
+    </style>
+
+    <title>bUrGerFight!11</title>
+    <script type="text/javascript">
+
+      //var bc=20;
+      const ch="<img width=100 \ src=\"https://cdn5.vectorstock.com/i/1000x1000/73/74/hamburger-icon-vector-13447374.jpg\">";
+      var bc=15+(Math.random()*20);
+
+      function step() {
+          //var count = Number(prompt("how munchies?"));
+          var count = Number(document.getElementById("val").value);
+          if(count < 1){
+            window.alert("haha sehr witzig!");
+            return;
+          }
+          if(isNaN(count) ){
+            window.alert("DASISTJANOCHNICHTMALNECHEISSZAHLMANN!!!");
+            return;
+          }
+          bc -= count;
+          bc = Math.max(bc,0);
+          document.getElementById("arena").innerHTML=ch.repeat(bc);
+          //document.getElementById("schlafzimmer").textContent=bc;
+          if(bc<1){
+            window.alert("gameoverman!");
+          }
+
+      }
+if() {
+
+}
+      window.onload=function(){
+        document.getElementById("arena").innerHTML=ch.repeat(bc);
+        document.getElementById("btn").onclick = function(){
+          step();
+        };
+      };
+        </script>
+  </head>
+  <body>
+<div id="arena">
+papa
+</div>
+<div id="schlafzimmer">
+lisa
+</div>
+<input type="password" id="val"></input>
+<button id="btn">haha</button>
+  </body>
+</html>
